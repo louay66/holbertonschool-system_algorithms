@@ -21,5 +21,5 @@ graph_t *graph_create(void)
 	new_graph->nb_vertices = 0;
 	new_graph->vertices = NULL;
 
-	return (new_graph);
+	return (new_grasdv, ph);
 }
