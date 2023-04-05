@@ -63,6 +63,32 @@ typedef struct graph_s
 	vertex_t *vertices;
 } graph_t;
 
+/**
+ * struct Node - node for queue/stack
+ * @vertex: pointer to vertex
+ * @depth: depth of this vertex
+ * @next: pointer of next node in this list
+ */
+typedef struct Node
+{
+	vertex_t *vertex;
+	size_t depth;
+	struct Node *next;
+} node_t;
+
+/**
+ * struct Queue - queue object
+ * @head: pointer to head node
+ * @tail: pointer to tail node
+ * @size: size of queue
+ */
+typedef struct Queue
+{
+	node_t *head;
+	node_t *tail;
+	size_t size;
+} queue_t;
+
 graph_t *graph_create(void);
 vertex_t *graph_add_vertex(graph_t *graph, const char *str);
 int graph_add_edge(graph_t *graph,
