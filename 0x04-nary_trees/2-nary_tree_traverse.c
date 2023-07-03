@@ -11,6 +11,8 @@
 void traverse_helper(nary_tree_t const *node, size_t depth,
 							void (*action)(nary_tree_t const *node, size_t depth), size_t max_depth)
 {
+	nary_tree_t *child;
+
 	action(node, depth);
 
 	if (depth > max_depth)
@@ -18,7 +20,7 @@ void traverse_helper(nary_tree_t const *node, size_t depth,
 		max_depth = depth;
 	}
 
-	nary_tree_t *child = node->children;
+	child = node->children;
 
 	while (child)
 	{
