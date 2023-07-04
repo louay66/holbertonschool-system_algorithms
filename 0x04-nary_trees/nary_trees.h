@@ -30,5 +30,6 @@ size_t nary_tree_traverse(nary_tree_t const *root,
 size_t nary_tree_depth(nary_tree_t const *root);
 
 size_t nary_tree_diameter(nary_tree_t const *root);
+int path_exists(nary_tree_t const *root, char const *const *path);
 
 #endif
